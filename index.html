@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Palette Pro — Azra Edition</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="wrap">
+    <header class="top">
+      <h1>Palette Pro</h1>
+      <div class="right">
+        <div class="switch">
+          <input id="themeToggle" class="switch-input" type="checkbox" aria-label="Toggle night mode">
+          <label for="themeToggle" class="switch-label">
+            <span class="switch-inner"></span>
+            <span class="switch-knob"></span>
+          </label>
+          <span class="toggle-text">Night</span>
+        </div>
+        <button id="saveBtn" class="btn">Save</button>
+        <button id="newBtn" class="btn primary">New Palette</button>
+      </div>
+    </header>
+
+    <section class="panel glass">
+      <div class="modes">
+        <label>Harmony</label>
+        <select id="modeSel" class="select">
+          <option value="random" selected>Random</option>
+          <option value="mono">Monochrome</option>
+          <option value="analogous">Analogous</option>
+          <option value="complementary">Complementary</option>
+          <option value="triad">Triad</option>
+          <option value="tetrad">Tetrad</option>
+        </select>
+      </div>
+      <div class="hint">Click hex to copy • Press Space for new colors • Click 🔒 to lock</div>
+    </section>
+
+    <main class="grid">
+      <!-- Swatches will be injected here -->
+    </main>
+
+    <section class="saved glass">
+      <div class="saved-head">
+        <h2>Saved Palettes</h2>
+        <button id="clearSaved" class="btn small">Clear</button>
+      </div>
+      <div id="savedList" class="saved-list"></div>
+    </section>
+
+    <footer class="foot">Make it pretty, then make it yours.</footer>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
